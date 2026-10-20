@@ -2,7 +2,25 @@
 
 A Claude skill for polishing English academic text in environmental science, water quality and pathogen modelling (QMRA, AMR, *E. coli*, wastewater, river models).
 
-Most AI polishing makes text sound more "sophisticated": *delve*, *leverage*, *holistic*, *robust*, *underscore*, and claims that are stronger than the evidence. This skill does the opposite. It aims for the plain, restrained style of published papers.
+## What it can do
+
+Give it a paragraph from an abstract, introduction, methods, results or discussion, and it will:
+
+1. **Fix the language with minimal edits**: grammar, cohesion, redundancy, tense and articles.
+2. **Replace unusual words** with words that published papers in the field actually use, and leave technical terms untouched.
+3. **Remove AI-sounding wording**, such as *delve*, *leverage*, *holistic* and *pivotal*.
+4. **Keep claims at the strength of the evidence**: no "demonstrates" where the paper only suggests.
+5. **Flag problems it will not fix by itself**, for example an inference written as a fact, an unclear term, or a citation in the wrong place, as a short list for you to confirm.
+
+Example (invented text):
+
+> **Before:** We leveraged a robust model to delve into the multifaceted dynamics of *E. coli* decay, which underscores the pivotal role of temperature.
+>
+> **After:** We used a model to examine the decay of *E. coli*, which shows that temperature is important.
+
+## Why it exists
+
+Most AI polishing makes text sound more "sophisticated": *delve*, *leverage*, *holistic*, *robust*, *underscore*, and claims that are stronger than the evidence. This skill does the opposite. It aims for the plain, restrained style of published papers. Its main rules are:
 
 - **Minimal edits.** Grammar, cohesion, redundancy, tense and articles only. Meaning, terminology and numbers stay as they are.
 - **Corpus-checked vocabulary.** General words that are rare in a corpus of 43 papers published before 2022 are replaced by common ones. Technical terms are never changed.
