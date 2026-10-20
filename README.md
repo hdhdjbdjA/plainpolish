@@ -56,7 +56,8 @@ grep -oF "robust" corpus.txt | wc -l
 ### 4. Build a word list
 Count every word and keep a word only if it occurs in several papers, not just many times in one:
 ```bash
-# per-paper counts, then keep words with total count >= 3 that appear in >= 8 papersawk 'FNR==1{delete s} {n=split(tolower($0),a,/[^a-z]+/); for(i=1;i<=n;i++){w=a[i]; if(length(w)<3)continue; t[w]++; if(!((w) in s)){s[w]=1; d[w]++}}} END{for(w in t) if(t[w]>=3 && d[w]>=8) print w, t[w]}' texts/*.txt | sort -k2,2nr > corpus-wordlist.txt
+# per-paper counts, then keep words with total count >= 3 that appear in >= 8 papers
+awk 'FNR==1{delete s} {n=split(tolower($0),a,/[^a-z]+/); for(i=1;i<=n;i++){w=a[i]; if(length(w)<3)continue; t[w]++; if(!((w) in s)){s[w]=1; d[w]++}}} END{for(w in t) if(t[w]>=3 && d[w]>=8) print w, t[w]}' texts/*.txt | sort -k2,2nr > corpus-wordlist.txt
 ```
 The same step removes author names, affiliations and publisher boilerplate, which appear in only a few papers. This list is what lets the skill say "this word is rare in the field, use a common one instead". Only counts are published here, not paper text.
 
