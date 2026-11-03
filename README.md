@@ -23,7 +23,7 @@ Example (invented text):
 Most AI polishing makes text sound more "sophisticated": *delve*, *leverage*, *holistic*, *robust*, *underscore*, and claims that are stronger than the evidence. This skill does the opposite. It aims for the plain, restrained style of published papers. Its main rules are:
 
 - **Minimal edits.** Grammar, cohesion, redundancy, tense and articles only. Meaning, terminology and numbers stay as they are.
-- **Corpus-checked vocabulary.** General words that are rare in a corpus of 43 papers published before 2022 are replaced by common ones. Technical terms are never changed.
+- **Corpus-checked vocabulary.** General words that are rare in a corpus of 49 papers (48 published before 2022) are replaced by common ones. Technical terms are never changed.
 - **No inflated claims.** Hedging follows the strength of the evidence in each sentence. Inferences are not upgraded to facts.
 - **Banned and restricted words.** A short list of words typical of AI-written text is banned. Words such as *robust* or *underscore* are not added by default.
 - **Short review notes.** After the polished paragraph, the skill lists questions about content, logic or evidence for the author to confirm. It does not change the text for them.
@@ -47,10 +47,10 @@ Copy the `plainpolish/` folder into your skills directory, for example `~/.claud
 Nothing was trained. No model weights changed. A skill is a text file that Claude reads when you call it. This one was made by **measuring a set of papers that the author considered well written, turning the measurements into written rules, and then correcting the rules with feedback on real paragraphs.**
 
 ### 1. Collect reference papers
-Start from papers whose style you accept as "good enough". Here these were research papers from ES&T, Water Research, Nature journals, Environment International, STOTEN and Environmental Pollution.
+Start from papers whose style you accept as "good enough". Here these were research papers from ES&T, Water Research, Nature journals, Environment International, STOTEN, Environmental Pollution, IJHEH, Environmental Research Letters and Global Biogeochemical Cycles.
 
 Two filters mattered:
-- **Publication year.** Only papers from 2021 or earlier were used. Papers from 2025 contained noticeably more words typical of AI polishing (for example *underscore*, *robust*, *notably*), so they would have taught the wrong style.
+- **Publication year.** Papers from 2021 or earlier were used by default; later papers only when the author vouched for them. Papers from 2025 contained noticeably more words typical of AI polishing (for example *underscore*, *robust*, *notably*), so they would have taught the wrong style.
 - **Original text only.** Summaries and notes of papers (including AI-written ones) are not a source of style. Use the paper itself.
 
 ### 2. Extract the text
@@ -136,7 +136,7 @@ A skill is loaded every time it is called, so size matters:
 
 ## Limits
 
-- The corpus is small (43 papers), so the word list is a guide, not a standard.
+- The corpus is small (49 papers), so the word list is a guide, not a standard.
 - The rules were tuned for environmental science and may suit other fields less well.
 - The skill does not check facts, citations or numbers. Always read the polished text yourself.
 

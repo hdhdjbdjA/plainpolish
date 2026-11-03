@@ -1,6 +1,6 @@
 # Domain lexicon (referenced by plainpolish)
 
-Source: 43 research papers published in 2021 or earlier, about 330,000 words. ES&T 12, Water Research 10 (including Water Research X), Nature journals 4, Environment International 6, STOTEN 7, Environmental Pollution 4. Papers from 2022 onwards were excluded because they may contain AI-polished text.
+Source: 49 research papers (48 published in 2021 or earlier, 1 from 2026 added by the author), about 375,000 words. ES&T 12, Water Research 10 (including Water Research X), Nature journals 5, Environment International 6, STOTEN 8, Environmental Pollution 4, IJHEH 2, ERL 1, GBC 1. Other papers from 2022 onwards were left out because they may contain AI-polished text; the one 2026 paper is included because the author chose it.
 
 ## 1. Domain terms (keep as written, do not replace with synonyms)
 
@@ -20,6 +20,6 @@ Follow the user's spelling (British or American: faecal/fecal, modelling/modelin
 
 ## 3. Limitations of this lexicon
 
-- The sample is 43 papers, of which only 4 are Nature journals and 4 are Environmental Pollution, so differences between journals are only indicative.
+- The sample is 49 papers, of which only 5 are Nature journals and 4 are Environmental Pollution, so differences between journals are only indicative.
 - The STOTEN and Environmental Pollution samples include reviews and papers by non-native authors; their language is less consistent than ES&T, Water Research or Nature, so use them only as a vocabulary and terminology reference.
 - The lexicon describes how people in this field write; the user's feedback takes precedence.
