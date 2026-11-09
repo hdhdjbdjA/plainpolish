@@ -111,3 +111,14 @@ Examples:
 - Before: "Unclassified samples were given the reference share of unclassified samples in the untreated samples." After: "We assumed that, at each site, the untreated samples are divided between the two groups in the same proportion as across all rivers. For 2018 we used the proportion of 2018, and for 2020 that of 2020."
 
 Output: the rewritten text, then "Points for the author to confirm" (assumptions to check, attribution, numbers that need a source).
+
+## 9. Figure and table captions
+
+From 179 figure and 106 table captions in the corpus. Polish captions with the same minimal edits; flag missing information under "Points for the author to confirm", never invent it.
+
+- **Title = noun phrase, no verb, no finding** (178 of 179 figure titles). "Spatial distribution of E. coli concentrations in river water.", not "E. coli concentrations increase downstream." Typical starts: Distribution of, Comparison of, Relative contribution of, Map of, Schematic of, Modelled ... . Median 16 words (figures), 11 (tables).
+- **Figures:** after the title, short sentences that say how to read the figure, not what it means: what each panel shows, symbols, lines, colours, statistics, sample size. Plain verbs: show (most common), represent, indicate, denote. "The bars show ...", "The dashed line indicates the detection limit.", "Error bars represent the standard deviation (n = 3)."
+- **Panels:** (a), (b) before or after the panel description, used the same way throughout the manuscript.
+- **Define in the caption** every abbreviation, unit and symbol needed to read the figure on its own, e.g. "concentrations (log10 copies/100 mL)". Give the data source if not the authors' own ("Data from X et al. (2019).").
+- **Tables:** title only, a noun phrase with units in brackets, often without a final full stop: "Removal of E. coli in each treatment step (log10 units)". Explanations, abbreviations and "nd, not detected" go in table footnotes (a, b, ...), not in the title.
+- Keep the caption numbering and style the user already uses (Fig. 1. / Figure 1. / Fig. 1 |).
