@@ -1,10 +1,18 @@
 # plainpolish
 
-A Claude skill for polishing English academic text in environmental science, water quality and pathogen modelling (QMRA, AMR, *E. coli*, wastewater, river models).
+Three Claude skills for English academic text in environmental science, water quality and pathogen modelling (QMRA, AMR, *E. coli*, wastewater, river models):
+
+| Skill | Use it to | Size per call |
+|---|---|---|
+| **pp** | polish text and captions with minimal edits | about 2,000 tokens |
+| **pc** | clarify text that readers cannot follow (sentences may be split and reordered, no facts added) | about 1,500 tokens |
+| **pw** | write text and figure or table captions from your notes, results, figures or code | about 2,200 tokens |
+
+Only the skill you call is loaded.
 
 ## What it can do
 
-Give it a paragraph from an abstract, introduction, methods, results or discussion, and it will:
+All three:
 
 1. **Fix the language with minimal edits**: grammar, cohesion, redundancy, tense and articles.
 2. **Replace unusual words** with words that published papers in the field actually use, and leave technical terms untouched.
@@ -30,15 +38,15 @@ Most AI polishing makes text sound more "sophisticated": *delve*, *leverage*, *h
 
 ## Install
 
-Copy the `plainpolish/` folder into your skills directory, for example `~/.claude/skills/`, and start a new session. Then ask Claude to polish a paragraph, or run `/plainpolish`.
+Copy the `pp/`, `pc/` and `pw/` folders into your skills directory, for example `~/.claude/skills/`, and start a new session. Then run `/pp`, `/pc` or `/pw`, or just ask Claude to polish, clarify or write.
 
 ## Files
 
 | File | Purpose |
 |---|---|
-| `plainpolish/SKILL.md` | The rules. Loaded on every use (about 2,300 tokens). |
-| `plainpolish/lexicon.md` | Domain terms and common verbs and phrases. Read only when needed. |
-| `plainpolish/corpus-wordlist.txt` | Word frequencies ("word count") for the vocabulary check. Looked up with `grep`, never read in full. |
+| `pp/`, `pc/`, `pw/` | One folder per skill: `SKILL.md` (the rules, loaded on use), `lexicon.md` (read only when needed), `corpus-wordlist.txt` (searched with `grep`, never read in full). |
+| `parts/` | The source: shared rule blocks and one header per skill. Edit these, not the skill folders. |
+| `build.sh` | Assembles `pp/`, `pc/` and `pw/` from `parts/`. Run it after every edit. |
 
 ---
 
@@ -102,7 +110,7 @@ The first version was wrong in several ways. Real paragraphs and short correctio
 
 ### 7. Keep the cost low
 A skill is loaded every time it is called, so size matters:
-- `SKILL.md` is the only file loaded each time (about 2,300 tokens).
+- Each mode is its own skill, so a call loads only the rules it needs (about 1,500 to 2,200 tokens).
 - The lexicon is read only when needed.
 - The word list is searched with `grep`, so it costs no tokens.
 - Rules are written in English. The same content in Chinese costs more tokens.

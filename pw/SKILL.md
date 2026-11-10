@@ -1,19 +1,24 @@
 ---
-name: plainpolish
-description: 'Polish English manuscript paragraphs in environmental science, water quality and pathogen modelling (QMRA, AMR, E. coli, wastewater, river models, etc.). Minimal edits, plain vocabulary checked against a corpus of published papers, no inflated claims, adequate hedging. Use when the user asks to polish, proofread or improve English academic text, or says a text is unclear or hard to understand (clarify mode).'
+name: pw
+description: 'Write English manuscript text and figure or table captions in environmental science, water quality and pathogen modelling (QMRA, AMR, E. coli, wastewater, river models, etc.) from notes, results, figures, tables or code supplied by the user, in the plain style of published papers: only facts supplied by the user, no inflated claims, hedging by evidence, gaps marked. Use when the user asks to write or draft a paragraph, section or caption.'
 ---
 
-# plainpolish
+# pw: write
 
 Target style: 49 papers (48 before 2022, 1 from 2026 chosen by the author) from ES&T, Water Research, Nature journals, Environment International, STOTEN, Environmental Pollution, IJHEH, ERL, GBC. **Never make text more sophisticated than these papers.**
 
-## 0. Workflow
+## Writing
 
-1. Minimal edits: grammar, cohesion, redundancy, ambiguity, tense, articles. Keep meaning, terminology, numbers.
-2. Output the full polished text. No change table, no explanation of changes. Then "Points for the author to confirm" (in the user's language): content, logic or evidence questions (inference written as fact, unclear term or number, citation placement, content in the wrong section). List only; omit if none.
-3. Restructure only on request, for multi-step procedures (section 6) or in clarify mode (section 7). Otherwise flag hard-to-follow sentences.
+When the user asks to write or draft text or captions from notes, bullet points, results, figures, tables or code. All other sections apply; the text must read like the corpus, not better.
+1. **Use only the user's material.** No new facts, numbers, citations, mechanisms or reasons. A missing value is `[?]`; a claim that needs a source but has none gets `[ref?]`. Never fill a gap from general knowledge without flagging it.
+2. **Structure by section** (see Sections): Results report numbers with figure references; Discussion compares with the cited work the user gave; Methods follow the Procedures rules.
+3. **One paragraph, one point.** First sentence states the point; then evidence; then, if needed, one sentence on what it means.
+   **Captions:** write them by the Captions rules from what the figure or table contains (variables, panels, units, statistics, n, data source). Title is a noun phrase without a finding; anything you cannot see or were not told is `[?]`.
+4. **Hedge by evidence** (see Claims and hedging): the user's measured results plain, interpretations hedged. Do not add implications the user did not state.
+5. **Length:** as asked; otherwise as short as the material allows. No filler opening ("In recent years, ...") or closing summary sentence.
+6. **Output:** the text, then "Points for the author to confirm": every `[?]` and `[ref?]`, assumptions made in ordering or linking the points, and claims to check.
 
-## 1. Vocabulary
+## Vocabulary
 
 Plain verbs: show, find, estimate, calculate, simulate, use, apply, account for, compare, assume, indicate, suggest.
 
@@ -25,23 +30,26 @@ Plain verbs: show, find, estimate, calculate, simulate, use, apply, account for,
 
 **Restricted** (do not add; if kept, once per manuscript with a concrete meaning): robust (statistical only), novel, comprehensive (complete scope only), crucial, critical, key, highlight, underscore, notably, importantly, substantial, paramount, shed light on, paves the way. Moreover or Furthermore, not both, not in every paragraph.
 
-## 2. Claims and hedging (most important)
+
+## Claims and hedging (most important)
 
 - **Never inflate** (may/suggest never become demonstrate/clearly show). Never replace a number with an adjective or invent a number.
 - Hedge by the evidence in each sentence, not by frequency. Measured or computed results: plain, no hedge (an over-hedged one may lose it). Inferences, causes, extrapolation, predictions: may, could, suggest, is likely. Inference written as fact: flag it, do not add the hedge yourself.
 - Self-assessment plain (reasonable / crude / does not perform well), neither inflated nor belittling. State the range of validity.
 - Limitation order: what, why, direction of bias, what would improve it. "The model may underestimate oocyst losses, because reservoirs are not yet included."
 
-## 3. Sentences
+
+## Sentences
 
 - Plain connectives (However, Therefore, Thus, In addition, In contrast, Here, To this end), not stacked or in every sentence.
 - Present for model structure and general facts; past for operations and findings. "We" for choices and assumptions; give purpose and reason in Methods.
 - No dashes for asides, no rhetorical questions, no adjective triplets. References in brackets: (Fig. 2a–c), (Table S4).
 - Target level: "These results suggest that reducing antibiotic use alone is likely insufficient for reversing resistance." "Oocyst excretion rates are variable and uncertain."
 
-## 4. Sections
 
-Polish each section toward its own profile; do not move content, flag it. Per 1,000 words, Results vs Discussion: numbers 15 vs 3, figure references 13 vs 3, citations 2 vs 11, hedges 2 vs 8; Results mostly past tense, Discussion mostly present.
+## Sections
+
+Each section has its own profile; write or polish toward it. When polishing, do not move content between sections; flag it. Per 1,000 words, Results vs Discussion: numbers 15 vs 3, figure references 13 vs 3, citations 2 vs 11, hedges 2 vs 8; Results mostly past tense, Discussion mostly present.
 
 - **Abstract:** background (1–2 sentences), gap or aim, methods in order, results with numbers, validation (deviations honestly), significance (one sentence).
 - **Introduction:** problem with numbers, mechanisms, existing models and shortcomings, gap ("has not been fully described", "is limited by the lack of"), "In this study we aim to..." / "Here, we show...".
@@ -50,16 +58,18 @@ Polish each section toward its own profile; do not move content, flag it. Per 1,
 - **Discussion:** open with the aim or main finding; novelty only as "To our knowledge, ..." and only if true. Compare each finding with cited work ("is in agreement with", "is consistent with", "In contrast, X et al. found ...") and say why results differ. Interpretation hedged by evidence. Limitations ("However, it should be noted that ..."). End with implications and specific research needs (should, we recommend, "Further research is needed on ...").
 - **Conclusions:** short; no citations, no figure references, few numbers; findings, then use ("Our model can be used for ...").
 
-## 5. Captions
 
-Same minimal edits; flag missing information, never invent it.
+## Captions
+
+When polishing, minimal edits. Flag missing information; never invent it.
 - **Title = noun phrase, no verb, no finding** (178 of 179 in the corpus): "Spatial distribution of E. coli concentrations in river water.", not "E. coli increases downstream." Starts: Distribution of, Comparison of, Relative contribution of, Map of, Modelled ...
 - **Figures:** then short sentences on how to read it (panels, symbols, lines, statistics, n), not what it means. Verbs: show, represent, indicate, denote. "Error bars represent the standard deviation (n = 3)." Panels (a), (b), used consistently.
 - Define every abbreviation, unit and symbol needed to read it alone; give the data source if not the authors' own.
 - **Tables:** title only, noun phrase, units in brackets: "Removal of E. coli in each treatment step (log10 units)". Explanations, abbreviations and "nd, not detected" go in footnotes (a, b).
 - Keep the user's numbering style (Fig. 1. / Figure 1. / Fig. 1 |).
 
-## 6. Procedures (automatic)
+
+## Procedures
 
 For a procedure of 3+ steps with a sentence of 2+ operations, an undefined term, one thing under several names, or a "this/these" pointing back more than one sentence:
 1. Aim first; mark steps (First, Next, Last).
@@ -70,17 +80,4 @@ For a procedure of 3+ steps with a sentence of 2+ operations, an undefined term,
 6. No nested brackets; repeat the noun instead of a distant "this".
 7. Keep every number, unit, source and term.
 
-## 7. Clarify mode
 
-When the user says the text is unclear, or asks to clarify. Sentences may be split, merged and reordered; section 6 applies. No facts, claims or reasons added.
-1. Known before new: what the source or data show, then what was done with it.
-2. Concrete subjects (samples, sites, plants), not abstractions (share of a share, part).
-3. One reference group per sentence ("out of what" fixed); a new group starts a new sentence.
-4. After a number from a source, say in plain words what it means ("In other words, 33% of the plants are upgraded.").
-5. Name the actual years or objects, not labels ("2018 and 2020", not "the sampling year").
-6. Own assumptions start with "We assumed"; credit each step to the cited method or "we"; if unclear, ask.
-7. Real numbers where they make a rule obvious; no made-up examples in the text.
-8. Describe what happens in the data instead of a rule for cases that never occur, only if the user or code confirms it.
-9. Each sentence must be understood on first reading.
-
-Example: "The share of positive samples was reduced by the same fraction as in the reference values." → "Across all rivers, 20% of the samples were positive in 2018 and 8% in 2020. At each site, we reduced the positive samples of 2018 by the same relative amount."
