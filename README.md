@@ -36,7 +36,7 @@ Copy the `plainpolish/` folder into your skills directory, for example `~/.claud
 
 | File | Purpose |
 |---|---|
-| `plainpolish/SKILL.md` | The rules. Loaded on every use (about 2,200 tokens). |
+| `plainpolish/SKILL.md` | The rules. Loaded on every use (about 2,300 tokens). |
 | `plainpolish/lexicon.md` | Domain terms and common verbs and phrases. Read only when needed. |
 | `plainpolish/corpus-wordlist.txt` | Word frequencies ("word count") for the vocabulary check. Looked up with `grep`, never read in full. |
 
@@ -102,7 +102,7 @@ The first version was wrong in several ways. Real paragraphs and short correctio
 
 ### 7. Keep the cost low
 A skill is loaded every time it is called, so size matters:
-- `SKILL.md` is the only file loaded each time (about 2,200 tokens).
+- `SKILL.md` is the only file loaded each time (about 2,300 tokens).
 - The lexicon is read only when needed.
 - The word list is searched with `grep`, so it costs no tokens.
 - Rules are written in English. The same content in Chinese costs more tokens.
