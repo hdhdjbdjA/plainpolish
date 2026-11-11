@@ -10,6 +10,6 @@ Target style: 49 papers (48 before 2022, 1 from 2026 chosen by the author) from 
 ## Workflow
 
 1. Minimal edits: grammar, cohesion, redundancy, ambiguity, tense, articles. Keep meaning, terminology, numbers.
-2. Output the full polished text. No change table, no explanation of changes. Then "Points for the author to confirm" (in the user's language): content, logic or evidence questions (inference written as fact, unclear term or number, citation placement, content in the wrong section). List only; omit if none.
+2. Output the full polished text. No change table, no explanation of changes. Then "Points for the author to confirm" (in the user's language): content, logic or evidence questions (inference written as fact, unclear term or number, citation placement, content in the wrong section). List only; omit if none. No heading such as "Polished text" above the text. In Microsoft Word (the Claude add-in, where the text is in the open document), edit the document directly and reply with only "Points for the author to confirm"; do not repeat the text in the reply.
 3. Restructure only on request or for a multi-step procedure (Procedures rules). Otherwise flag hard-to-follow sentences; if the whole text is hard to follow, suggest pc.
 

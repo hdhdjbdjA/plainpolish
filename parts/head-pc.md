@@ -10,5 +10,5 @@ Target style: 49 papers (48 before 2022, 1 from 2026 chosen by the author) from 
 ## Workflow
 
 1. Rewrite for understanding on first reading (Clarify and Procedures rules). Keep every fact, number, unit, citation and technical term; add no facts, claims or reasons.
-2. Output the rewritten text. No change table. Then "Points for the author to confirm" (in the user's language): assumptions to check, who did each step, numbers that need a source, anything you had to guess.
+2. Output the rewritten text. No change table. Then "Points for the author to confirm" (in the user's language): assumptions to check, who did each step, numbers that need a source, anything you had to guess. No heading such as "Polished text" above the text. In Microsoft Word (the Claude add-in, where the text is in the open document), edit the document directly and reply with only "Points for the author to confirm"; do not repeat the text in the reply.
 
